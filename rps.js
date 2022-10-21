@@ -9,12 +9,15 @@
 function getComputerChoice () {
     const rps = ["Rock", "Paper", "Scissors"]
     let choice = rps[Math.floor(Math.random()*rps.length)];
-    console.log(choice);
+    return choice;
 }
 
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection.toLowerCase;
+    playerSelection.toLowerCase();
     if (playerSelection == "rock" && computerSelection == "Scissors") {
         return "You win! Rock beats scissors";
     } else if (playerSelection == "paper" && computerSelection == "Rock") {
@@ -30,14 +33,12 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == "rock" && computerSelection == "Rock" || playerSelection == "paper" && computerSelection == "Paper" || playerSelection == "scissors" && computerSelection == "Scissors") {
         return "Draw!"
     } else {
-        console.log("Game over!")
+        console.log("Enter a valid answer")
     } }
   
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
 
-function game() {
+
+function game(playRound) {
 
 }
