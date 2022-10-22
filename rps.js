@@ -46,9 +46,9 @@ function game(playRound) {
         const playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
         console.log(result);
         if (result == "You win! Rock beats scissors" || "You win! Paper beats rock" || "You win! Scissors beats paper") {
-           console.log(playerscore + 1);
+           console.log("You scored " + playerscore ++);
         } else if (result == "You lose! Paper beats rock" || "You lose! Scissors beats paper" || "You lose! Rock beats scissors") {
-            console.log(computerscore + 1);
+            console.log("CPU scored " + computerscore ++);
         } else (console.log(result));
     }
 }
