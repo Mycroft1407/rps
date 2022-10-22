@@ -12,33 +12,43 @@ function getComputerChoice () {
     return choice;
 }
 
-const playerSelection = "rock";
+let result = "";
+const playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection.toLowerCase();
     if (playerSelection == "rock" && computerSelection == "Scissors") {
-        return "You win! Rock beats scissors";
+        return result = "You win! Rock beats scissors";
     } else if (playerSelection == "paper" && computerSelection == "Rock") {
-        return "You win! Paper beats rock"; 
+        return result = "You win! Paper beats rock"; 
     } else if (playerSelection == "scissors" && computerSelection == "Paper") {
-        return "You win! Scissors beats paper";
+        return result = "You win! Scissors beats paper";
     } else if (playerSelection == "rock" && computerSelection == "Paper") {
-        return "You lose! Paper beats rock"; 
+        return result = "You lose! Paper beats rock"; 
     } else if (playerSelection == "paper" && computerSelection == "Scissors") {
-        return "You lose! Scissors beats paper";
+        return result = "You lose! Scissors beats paper";
     } else if (playerSelection == "scissors" && computerSelection == "Rock") {
-        return "You lose! Rock beats scissors";
+        return result = "You lose! Rock beats scissors";
     } else if (playerSelection == "rock" && computerSelection == "Rock" || playerSelection == "paper" && computerSelection == "Paper" || playerSelection == "scissors" && computerSelection == "Scissors") {
-        return "Draw!"
+        return result = "Draw!"
     } else {
         console.log("Enter a valid answer")
     } }
   
 
 
+let playerscore = 0;
+let computerscore = 0;
 
 function game(playRound) {
-
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+        console.log(result);
+        if (result == "You win! Rock beats scissors" || "You win! Paper beats rock" || "You win! Scissors beats paper") {
+           console.log(playerscore + 1);
+        } else if (result == "You lose! Paper beats rock" || "You lose! Scissors beats paper" || "You lose! Rock beats scissors") {
+            console.log(computerscore + 1);
+        } else (console.log(result));
+    }
 }
